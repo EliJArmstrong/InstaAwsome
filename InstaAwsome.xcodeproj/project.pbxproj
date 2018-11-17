@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29F401AF13538A932515B4DE /* Pods_InstaAwsome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DB4BD95A20A63C358756F6 /* Pods_InstaAwsome.framework */; };
 		B72E9F0A219F90A900ADE01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E9F09219F90A900ADE01B /* AppDelegate.swift */; };
-		B72E9F0C219F90A900ADE01B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E9F0B219F90A900ADE01B /* ViewController.swift */; };
+		B72E9F0C219F90A900ADE01B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E9F0B219F90A900ADE01B /* LoginVC.swift */; };
 		B72E9F0F219F90A900ADE01B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E9F0D219F90A900ADE01B /* Main.storyboard */; };
 		B72E9F11219F90AA00ADE01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72E9F10219F90AA00ADE01B /* Assets.xcassets */; };
 		B72E9F14219F90AA00ADE01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E9F12219F90AA00ADE01B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04DB4BD95A20A63C358756F6 /* Pods_InstaAwsome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaAwsome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35F0A0097492ABE04BEAFEE0 /* Pods-InstaAwsome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAwsome.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAwsome/Pods-InstaAwsome.release.xcconfig"; sourceTree = "<group>"; };
 		B72E9F06219F90A900ADE01B /* InstaAwsome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaAwsome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72E9F09219F90A900ADE01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B72E9F0B219F90A900ADE01B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B72E9F0B219F90A900ADE01B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B72E9F0E219F90A900ADE01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B72E9F10219F90AA00ADE01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B72E9F13219F90AA00ADE01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B72E9F15219F90AA00ADE01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC519233A25E1892931797BE /* Pods-InstaAwsome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAwsome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAwsome/Pods-InstaAwsome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F401AF13538A932515B4DE /* Pods_InstaAwsome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BCF1747861953DE41841F66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC519233A25E1892931797BE /* Pods-InstaAwsome.debug.xcconfig */,
+				35F0A0097492ABE04BEAFEE0 /* Pods-InstaAwsome.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B62C6D399C33C322E695FD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04DB4BD95A20A63C358756F6 /* Pods_InstaAwsome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B72E9EFD219F90A900ADE01B = {
 			isa = PBXGroup;
 			children = (
 				B72E9F08219F90A900ADE01B /* InstaAwsome */,
 				B72E9F07219F90A900ADE01B /* Products */,
+				0BCF1747861953DE41841F66 /* Pods */,
+				9B62C6D399C33C322E695FD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				B72E9F09219F90A900ADE01B /* AppDelegate.swift */,
-				B72E9F0B219F90A900ADE01B /* ViewController.swift */,
+				B72E9F0B219F90A900ADE01B /* LoginVC.swift */,
 				B72E9F0D219F90A900ADE01B /* Main.storyboard */,
 				B72E9F10219F90AA00ADE01B /* Assets.xcassets */,
 				B72E9F12219F90AA00ADE01B /* LaunchScreen.storyboard */,
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B72E9F18219F90AA00ADE01B /* Build configuration list for PBXNativeTarget "InstaAwsome" */;
 			buildPhases = (
+				4FA3F6211EAFAC3FD1DE233B /* [CP] Check Pods Manifest.lock */,
 				B72E9F02219F90A900ADE01B /* Sources */,
 				B72E9F03219F90A900ADE01B /* Frameworks */,
 				B72E9F04219F90A900ADE01B /* Resources */,
+				1FECCB4C3CCA4E32177FCE06 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +156,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FECCB4C3CCA4E32177FCE06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-InstaAwsome/Pods-InstaAwsome-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaAwsome/Pods-InstaAwsome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FA3F6211EAFAC3FD1DE233B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaAwsome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B72E9F02219F90A900ADE01B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B72E9F0C219F90A900ADE01B /* ViewController.swift in Sources */,
+				B72E9F0C219F90A900ADE01B /* LoginVC.swift in Sources */,
 				B72E9F0A219F90A900ADE01B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +347,7 @@
 		};
 		B72E9F19219F90AA00ADE01B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC519233A25E1892931797BE /* Pods-InstaAwsome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +366,7 @@
 		};
 		B72E9F1A219F90AA00ADE01B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35F0A0097492ABE04BEAFEE0 /* Pods-InstaAwsome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
