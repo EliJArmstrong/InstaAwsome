@@ -13,6 +13,7 @@
 		B72E9F0F219F90A900ADE01B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E9F0D219F90A900ADE01B /* Main.storyboard */; };
 		B72E9F11219F90AA00ADE01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72E9F10219F90AA00ADE01B /* Assets.xcassets */; };
 		B72E9F14219F90AA00ADE01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E9F12219F90AA00ADE01B /* LaunchScreen.storyboard */; };
+		B72E9F1C219FCB6400ADE01B /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E9F1B219FCB6400ADE01B /* ImageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B72E9F10219F90AA00ADE01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B72E9F13219F90AA00ADE01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B72E9F15219F90AA00ADE01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B72E9F1B219FCB6400ADE01B /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		FC519233A25E1892931797BE /* Pods-InstaAwsome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAwsome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAwsome/Pods-InstaAwsome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				B72E9F10219F90AA00ADE01B /* Assets.xcassets */,
 				B72E9F12219F90AA00ADE01B /* LaunchScreen.storyboard */,
 				B72E9F15219F90AA00ADE01B /* Info.plist */,
+				B72E9F1B219FCB6400ADE01B /* ImageVC.swift */,
 			);
 			path = InstaAwsome;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			files = (
 				B72E9F0C219F90A900ADE01B /* LoginVC.swift in Sources */,
 				B72E9F0A219F90A900ADE01B /* AppDelegate.swift in Sources */,
+				B72E9F1C219FCB6400ADE01B /* ImageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CVK2395JV5;
+				DEVELOPMENT_TEAM = TKPE756D4N;
 				INFOPLIST_FILE = InstaAwsome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -370,7 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CVK2395JV5;
+				DEVELOPMENT_TEAM = TKPE756D4N;
 				INFOPLIST_FILE = InstaAwsome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

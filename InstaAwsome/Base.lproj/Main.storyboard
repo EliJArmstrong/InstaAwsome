@@ -62,14 +62,34 @@
             </objects>
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--ImageVC-->
         <scene sceneID="nlr-eS-sr3">
             <objects>
-                <viewController id="G2R-Sh-ydP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoggedInVC" id="G2R-Sh-ydP" customClass="ImageVC" customModule="InstaAwsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e42-ax-oFc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm logged in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWh-wq-2jW">
+                                <rect key="frame" x="138.5" y="323" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ah-9h-v8s">
+                                <rect key="frame" x="164" y="414" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="camera:" destination="G2R-Sh-ydP" eventType="touchUpInside" id="GVp-IW-RON"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AWh-wq-2jW" firstAttribute="centerX" secondItem="e42-ax-oFc" secondAttribute="centerX" id="SjS-wP-zJ3"/>
+                            <constraint firstItem="AWh-wq-2jW" firstAttribute="centerY" secondItem="e42-ax-oFc" secondAttribute="centerY" id="UO8-1o-yIG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="R3p-Ub-LaR"/>
                     </view>
                 </viewController>

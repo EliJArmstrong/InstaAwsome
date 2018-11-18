@@ -26,6 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://mysterious-forest-31685.herokuapp.com/parse"
             })
         )
+        
+        if PFUser.current() != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // view controller currently being set in Storyboard as default will be overridden
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "LoggedInVC")
+        }
+        
         return true
     }
 
