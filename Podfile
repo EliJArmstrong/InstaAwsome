@@ -9,5 +9,7 @@ target 'InstaAwsome' do
 
   # Pods for InstaAwsome
   pod 'Parse'
+  pod 'Parse/UI'
+  pod 'lottie-ios'
 
 end

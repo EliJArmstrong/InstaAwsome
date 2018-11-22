@@ -8,17 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		29F401AF13538A932515B4DE /* Pods_InstaAwsome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DB4BD95A20A63C358756F6 /* Pods_InstaAwsome.framework */; };
+		B72C78C721A2247C00677D9B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C78C621A2247C00677D9B /* Post.swift */; };
 		B72E9F0A219F90A900ADE01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E9F09219F90A900ADE01B /* AppDelegate.swift */; };
 		B72E9F0C219F90A900ADE01B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E9F0B219F90A900ADE01B /* LoginVC.swift */; };
 		B72E9F0F219F90A900ADE01B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E9F0D219F90A900ADE01B /* Main.storyboard */; };
 		B72E9F11219F90AA00ADE01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72E9F10219F90AA00ADE01B /* Assets.xcassets */; };
 		B72E9F14219F90AA00ADE01B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72E9F12219F90AA00ADE01B /* LaunchScreen.storyboard */; };
-		B72E9F1C219FCB6400ADE01B /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E9F1B219FCB6400ADE01B /* ImageVC.swift */; };
+		B72E9F1C219FCB6400ADE01B /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72E9F1B219FCB6400ADE01B /* PostVC.swift */; };
+		B744A1FC21A27F3D004F07A8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B744A1FB21A27F3D004F07A8 /* GradientView.swift */; };
+		B744A20021A2AE78004F07A8 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B744A1FF21A2AE78004F07A8 /* DetailsVC.swift */; };
+		B77998AE21A2345000A000D6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77998AD21A2345000A000D6 /* PostCell.swift */; };
+		B77998B521A2588900A000D6 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77998B421A2588900A000D6 /* CreatePostVC.swift */; };
+		B77998B921A275D800A000D6 /* instagram.json in Resources */ = {isa = PBXBuildFile; fileRef = B77998B821A275D800A000D6 /* instagram.json */; };
+		B78BB66521A5009D0008D5A9 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB66421A5009D0008D5A9 /* ProfileVC.swift */; };
+		B78BB66721A504A70008D5A9 /* ErrorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB66621A504A70008D5A9 /* ErrorLog.swift */; };
+		B78BB66921A50B120008D5A9 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB66821A50B120008D5A9 /* CommentCell.swift */; };
+		B78BB66B21A50BC90008D5A9 /* Circleimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB66A21A50BC90008D5A9 /* Circleimage.swift */; };
+		B78BB66D21A514190008D5A9 /* UserImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB66C21A514190008D5A9 /* UserImage.swift */; };
+		B78BB66F21A51C060008D5A9 /* UserPostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB66E21A51C060008D5A9 /* UserPostImageCell.swift */; };
+		B78BB67121A66CA20008D5A9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB67021A66CA20008D5A9 /* Comment.swift */; };
+		B78BB67321A671C60008D5A9 /* heart.json in Resources */ = {isa = PBXBuildFile; fileRef = B78BB67221A671C60008D5A9 /* heart.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04DB4BD95A20A63C358756F6 /* Pods_InstaAwsome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaAwsome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0A0097492ABE04BEAFEE0 /* Pods-InstaAwsome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAwsome.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAwsome/Pods-InstaAwsome.release.xcconfig"; sourceTree = "<group>"; };
+		B72C78C621A2247C00677D9B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B72E9F06219F90A900ADE01B /* InstaAwsome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaAwsome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72E9F09219F90A900ADE01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B72E9F0B219F90A900ADE01B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -26,7 +41,20 @@
 		B72E9F10219F90AA00ADE01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B72E9F13219F90AA00ADE01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B72E9F15219F90AA00ADE01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B72E9F1B219FCB6400ADE01B /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		B72E9F1B219FCB6400ADE01B /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		B744A1FB21A27F3D004F07A8 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		B744A1FF21A2AE78004F07A8 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		B77998AD21A2345000A000D6 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		B77998B421A2588900A000D6 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		B77998B821A275D800A000D6 /* instagram.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = instagram.json; sourceTree = "<group>"; };
+		B78BB66421A5009D0008D5A9 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		B78BB66621A504A70008D5A9 /* ErrorLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLog.swift; sourceTree = "<group>"; };
+		B78BB66821A50B120008D5A9 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		B78BB66A21A50BC90008D5A9 /* Circleimage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circleimage.swift; sourceTree = "<group>"; };
+		B78BB66C21A514190008D5A9 /* UserImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImage.swift; sourceTree = "<group>"; };
+		B78BB66E21A51C060008D5A9 /* UserPostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostImageCell.swift; sourceTree = "<group>"; };
+		B78BB67021A66CA20008D5A9 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		B78BB67221A671C60008D5A9 /* heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart.json; sourceTree = "<group>"; };
 		FC519233A25E1892931797BE /* Pods-InstaAwsome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAwsome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAwsome/Pods-InstaAwsome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +87,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B72C78C321A21C8000677D9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B72C78C621A2247C00677D9B /* Post.swift */,
+				B78BB66621A504A70008D5A9 /* ErrorLog.swift */,
+				B78BB66C21A514190008D5A9 /* UserImage.swift */,
+				B78BB67021A66CA20008D5A9 /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B72C78C421A21C9200677D9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B78BB66A21A50BC90008D5A9 /* Circleimage.swift */,
+				B744A1FB21A27F3D004F07A8 /* GradientView.swift */,
+				B77998AD21A2345000A000D6 /* PostCell.swift */,
+				B78BB66821A50B120008D5A9 /* CommentCell.swift */,
+				B78BB66E21A51C060008D5A9 /* UserPostImageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B72C78C521A21C9A00677D9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B72E9F1B219FCB6400ADE01B /* PostVC.swift */,
+				B72E9F0B219F90A900ADE01B /* LoginVC.swift */,
+				B77998B421A2588900A000D6 /* CreatePostVC.swift */,
+				B744A1FF21A2AE78004F07A8 /* DetailsVC.swift */,
+				B78BB66421A5009D0008D5A9 /* ProfileVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		B72E9EFD219F90A900ADE01B = {
 			isa = PBXGroup;
 			children = (
@@ -80,13 +143,16 @@
 		B72E9F08219F90A900ADE01B /* InstaAwsome */ = {
 			isa = PBXGroup;
 			children = (
+				B78BB67221A671C60008D5A9 /* heart.json */,
+				B77998B821A275D800A000D6 /* instagram.json */,
+				B72C78C521A21C9A00677D9B /* Controller */,
+				B72C78C421A21C9200677D9B /* View */,
+				B72C78C321A21C8000677D9B /* Model */,
 				B72E9F09219F90A900ADE01B /* AppDelegate.swift */,
-				B72E9F0B219F90A900ADE01B /* LoginVC.swift */,
 				B72E9F0D219F90A900ADE01B /* Main.storyboard */,
 				B72E9F10219F90AA00ADE01B /* Assets.xcassets */,
 				B72E9F12219F90AA00ADE01B /* LaunchScreen.storyboard */,
 				B72E9F15219F90AA00ADE01B /* Info.plist */,
-				B72E9F1B219FCB6400ADE01B /* ImageVC.swift */,
 			);
 			path = InstaAwsome;
 			sourceTree = "<group>";
@@ -151,6 +217,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77998B921A275D800A000D6 /* instagram.json in Resources */,
+				B78BB67321A671C60008D5A9 /* heart.json in Resources */,
 				B72E9F14219F90AA00ADE01B /* LaunchScreen.storyboard in Resources */,
 				B72E9F11219F90AA00ADE01B /* Assets.xcassets in Resources */,
 				B72E9F0F219F90A900ADE01B /* Main.storyboard in Resources */,
@@ -169,11 +237,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-InstaAwsome/Pods-InstaAwsome-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -205,9 +275,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77998B521A2588900A000D6 /* CreatePostVC.swift in Sources */,
+				B744A20021A2AE78004F07A8 /* DetailsVC.swift in Sources */,
+				B72C78C721A2247C00677D9B /* Post.swift in Sources */,
+				B78BB66921A50B120008D5A9 /* CommentCell.swift in Sources */,
+				B78BB66F21A51C060008D5A9 /* UserPostImageCell.swift in Sources */,
+				B78BB66521A5009D0008D5A9 /* ProfileVC.swift in Sources */,
+				B78BB66B21A50BC90008D5A9 /* Circleimage.swift in Sources */,
+				B78BB66D21A514190008D5A9 /* UserImage.swift in Sources */,
 				B72E9F0C219F90A900ADE01B /* LoginVC.swift in Sources */,
 				B72E9F0A219F90A900ADE01B /* AppDelegate.swift in Sources */,
-				B72E9F1C219FCB6400ADE01B /* ImageVC.swift in Sources */,
+				B78BB67121A66CA20008D5A9 /* Comment.swift in Sources */,
+				B72E9F1C219FCB6400ADE01B /* PostVC.swift in Sources */,
+				B77998AE21A2345000A000D6 /* PostCell.swift in Sources */,
+				B744A1FC21A27F3D004F07A8 /* GradientView.swift in Sources */,
+				B78BB66721A504A70008D5A9 /* ErrorLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
