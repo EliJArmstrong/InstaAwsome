@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -15,6 +16,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var postImg: UIImageView!
     @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var postBtn: UIButton!
+    @IBOutlet weak var animationView: LOTAnimationView!
     
     
     override func viewDidLoad() {
@@ -22,6 +24,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         postBtn.isEnabled = false
         commentField.becomeFirstResponder()
         imagePicker.delegate = self
+        animationView.setAnimation(named: "instagram")
         let tap = UITapGestureRecognizer(target: self, action: #selector(photoPicker(tapGestureRecognizer:)))
         postImg.isUserInteractionEnabled = true
         postImg.addGestureRecognizer(tap)
@@ -94,12 +97,17 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     @IBAction func postGram(_ sender: Any) {
         let image = postImg.image
+        self.animationView.isHidden = false
+        self.animationView.play()
+        self.animationView.loopAnimation = true
         Post.postUserImage(image: image, withCaption: commentField.text ?? "") { (success, error) in
             if let error = error{
                 print(error.localizedDescription)
             }else{
                 print("Awesome it posted")
                 self.view.endEditing(true)
+                self.animationView.stop()
+                self.animationView.isHidden = true
                 self.dismiss(animated: true, completion: nil)
             }
         }

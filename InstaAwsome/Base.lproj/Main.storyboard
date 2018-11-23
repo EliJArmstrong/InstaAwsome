@@ -398,6 +398,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="DR5-un-7NX" customClass="LOTAnimationView">
+                                <rect key="frame" x="20" y="305" width="374" height="286"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="286" id="EOx-mL-mgw"/>
+                                    <constraint firstAttribute="width" constant="374" id="xlA-X8-LzW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="instagram"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -407,6 +418,8 @@
                             <constraint firstItem="D0W-8c-pHh" firstAttribute="trailing" secondItem="zam-bx-4Z9" secondAttribute="trailing" constant="20" id="8fH-9a-9lh"/>
                             <constraint firstItem="A4O-dA-VJU" firstAttribute="leading" secondItem="D0W-8c-pHh" secondAttribute="leading" constant="20" id="ECJ-ZW-SdA"/>
                             <constraint firstItem="zam-bx-4Z9" firstAttribute="top" secondItem="A4O-dA-VJU" secondAttribute="bottom" constant="8" id="EDs-tH-IZa"/>
+                            <constraint firstItem="DR5-un-7NX" firstAttribute="centerY" secondItem="1d4-Xp-Xvl" secondAttribute="centerY" id="Zx8-FX-gEq"/>
+                            <constraint firstItem="DR5-un-7NX" firstAttribute="centerX" secondItem="1d4-Xp-Xvl" secondAttribute="centerX" id="b7k-mr-vCV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D0W-8c-pHh"/>
                         <userDefinedRuntimeAttributes>
@@ -443,6 +456,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="animationView" destination="DR5-un-7NX" id="OkA-g4-SbP"/>
                         <outlet property="commentField" destination="zam-bx-4Z9" id="KDa-oV-TEq"/>
                         <outlet property="postBtn" destination="PC1-kI-R9f" id="iQe-Op-4TH"/>
                         <outlet property="postImg" destination="A4O-dA-VJU" id="RMz-L4-iRZ"/>
@@ -450,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JT9-hs-cfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4107" y="-560"/>
+            <point key="canvasLocation" x="4105.7971014492759" y="-560.49107142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z03-DF-OWy">
