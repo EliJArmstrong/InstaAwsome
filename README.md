@@ -49,13 +49,23 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src="/gifs/instaGram.gif?raw=true" width="" alt= 'Video Walkthrough'> <img src="/gifs/instaGramLogin.gif?raw=true" width="" alt= 'Video Walkthrough'>
+## General Overview
+<img src="/gifs/instaGram.gif?raw=true" width="" alt= 'Video Walkthrough'>
+## Creating an account
+<img src="/gifs/instaGramLogin.gif?raw=true" width="" alt= 'Video Walkthrough'>
+## Persisted across app restarts
 <img src="/gifs/instaGramUserStays.gif?raw=true" width="" alt= 'Video Walkthrough'>
+## Adding a comment
 <img src="/gifs/instaGramAddComment.gif?raw=true" width="" alt= 'Video Walkthrough'>
+## Liking a post
 <img src="/gifs/instaGramLikeBtn.gif?raw=true" width="" alt= 'Video Walkthrough'>
+## Posting a image
 <img src="/gifs/instaGramPost.gif?raw=true" width="" alt= 'Video Walkthrough'>
+## Setting the user profile image
 <img src="/gifs/instaGramUserImage.gif?raw=true" width="" alt= 'Video Walkthrough'>
+## Profile overview
 <img src="/gifs/instaGramuserImgDetail.gif?raw=true" width="" alt= 'Video Walkthrough'>
+## Logout
 <img src="/gifs/instaGramLogOut.gif?raw=true" width="" alt= 'Video Walkthrough'>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
