@@ -24,6 +24,7 @@ class ProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         imagePicker.delegate = self
         collectView.delegate = self
         collectView.dataSource = self
+        tabBarController?.tabBar.isHidden = false
         let tap = UITapGestureRecognizer(target: self, action: #selector(photoPicker(tapGestureRecognizer:)))
         userImage.addGestureRecognizer(tap)
         userImage.isUserInteractionEnabled = true

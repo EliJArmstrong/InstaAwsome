@@ -7,9 +7,13 @@
 //
 
 import UIKit
+//import Parse
 
 class CommentCell: UITableViewCell {
-
+    
+    @IBOutlet weak var commentLbl: UILabel!
+    @IBOutlet weak var userImage: Circleimage!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

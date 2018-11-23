@@ -13,6 +13,7 @@ class Comment: PFObject, PFSubclassing{
     
     @NSManaged var author: PFUser
     @NSManaged var comment: String
+    //@NSManaged var poster: String
     @NSManaged var post: Post
     
     static func parseClassName() -> String {
@@ -23,6 +24,7 @@ class Comment: PFObject, PFSubclassing{
         let commentObject = Comment()
         
         commentObject.author = PFUser.current()!
+        //commentObject.poster = PFUser.current()!.username!
         commentObject.comment = comment
         commentObject.post = post
         

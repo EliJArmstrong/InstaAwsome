@@ -28,6 +28,8 @@
 		B78BB66F21A51C060008D5A9 /* UserPostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB66E21A51C060008D5A9 /* UserPostImageCell.swift */; };
 		B78BB67121A66CA20008D5A9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB67021A66CA20008D5A9 /* Comment.swift */; };
 		B78BB67321A671C60008D5A9 /* heart.json in Resources */ = {isa = PBXBuildFile; fileRef = B78BB67221A671C60008D5A9 /* heart.json */; };
+		B78BB67521A6BFA10008D5A9 /* like.json in Resources */ = {isa = PBXBuildFile; fileRef = B78BB67421A6BFA10008D5A9 /* like.json */; };
+		B78BB67721A6CA350008D5A9 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BB67621A6CA350008D5A9 /* KeyboardBoundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		B78BB66E21A51C060008D5A9 /* UserPostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostImageCell.swift; sourceTree = "<group>"; };
 		B78BB67021A66CA20008D5A9 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		B78BB67221A671C60008D5A9 /* heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart.json; sourceTree = "<group>"; };
+		B78BB67421A6BFA10008D5A9 /* like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = like.json; sourceTree = "<group>"; };
+		B78BB67621A6CA350008D5A9 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		FC519233A25E1892931797BE /* Pods-InstaAwsome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaAwsome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaAwsome/Pods-InstaAwsome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,7 @@
 		B72C78C421A21C9200677D9B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B78BB67621A6CA350008D5A9 /* KeyboardBoundView.swift */,
 				B78BB66A21A50BC90008D5A9 /* Circleimage.swift */,
 				B744A1FB21A27F3D004F07A8 /* GradientView.swift */,
 				B77998AD21A2345000A000D6 /* PostCell.swift */,
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B78BB67221A671C60008D5A9 /* heart.json */,
+				B78BB67421A6BFA10008D5A9 /* like.json */,
 				B77998B821A275D800A000D6 /* instagram.json */,
 				B72C78C521A21C9A00677D9B /* Controller */,
 				B72C78C421A21C9200677D9B /* View */,
@@ -219,6 +225,7 @@
 			files = (
 				B77998B921A275D800A000D6 /* instagram.json in Resources */,
 				B78BB67321A671C60008D5A9 /* heart.json in Resources */,
+				B78BB67521A6BFA10008D5A9 /* like.json in Resources */,
 				B72E9F14219F90AA00ADE01B /* LaunchScreen.storyboard in Resources */,
 				B72E9F11219F90AA00ADE01B /* Assets.xcassets in Resources */,
 				B72E9F0F219F90A900ADE01B /* Main.storyboard in Resources */,
@@ -281,6 +288,7 @@
 				B78BB66921A50B120008D5A9 /* CommentCell.swift in Sources */,
 				B78BB66F21A51C060008D5A9 /* UserPostImageCell.swift in Sources */,
 				B78BB66521A5009D0008D5A9 /* ProfileVC.swift in Sources */,
+				B78BB67721A6CA350008D5A9 /* KeyboardBoundView.swift in Sources */,
 				B78BB66B21A50BC90008D5A9 /* Circleimage.swift in Sources */,
 				B78BB66D21A514190008D5A9 /* UserImage.swift in Sources */,
 				B72E9F0C219F90A900ADE01B /* LoginVC.swift in Sources */,

@@ -10,12 +10,14 @@
 
 import UIKit
 import Parse
+import Lottie
 
 class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var posts = [Post]()
     var sendString: String!
     let refreshControl = UIRefreshControl()
+    @IBOutlet weak var animationView: LOTAnimationView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,7 +25,10 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tabBarController?.tabBar.isHidden = false
+        animationView.setAnimation(named: "instagram")
+        animationView.loopAnimation = true
+        animationView.play()
         refreshControl.addTarget(self, action: #selector(fetchPosts), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
         self.navigationController?.navigationBar.titleTextAttributes =
@@ -55,11 +60,18 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func buttonOnClick(_ sender: UIButton)
     {
         let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
-        {
+//        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
+//        {
             alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-                self.sendString = "Camera"
-                self.performSegue(withIdentifier: "CreatePostSegue", sender: nil)
+                if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera)){
+                    self.sendString = "Camera"
+                    self.performSegue(withIdentifier: "CreatePostSegue", sender: nil)
+                } else{
+                    let alert = UIAlertController(title: "Sorry", message: "You do not have a camera 📸 available 😢", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
             }))
             alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
                 self.sendString = "Gallery"
@@ -69,10 +81,10 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
             
             self.present(alert, animated: true, completion: nil)
-        } else{
-            self.sendString = "Gallery"
-            self.performSegue(withIdentifier: "CreatePostSegue", sender: nil)
-        }
+//        } else{
+//            self.sendString = "Gallery"
+//            self.performSegue(withIdentifier: "CreatePostSegue", sender: nil)
+//        }
     }
     
     @objc func fetchPosts(){
@@ -88,6 +100,8 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 //print(posts!)
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+                self.animationView.stop()
+                self.animationView.isHidden = true
             }
         })
         
@@ -102,21 +116,84 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             let detailVC = segue.destination as! DetailsVC
             let cell = sender as! UITableViewCell
             if let indexPath = tableView.indexPath(for: cell){
-                detailVC.post = posts[indexPath.row]
+                detailVC.post = posts[indexPath.section]
             }
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
     
+    // Table view controls
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print("\n \(posts[section].count) \n")
+        return 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        headerView.backgroundColor = UIColor(white: 0, alpha: 0)
+        
+        let profileView = PFImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
+        profileView.clipsToBounds = true
+        profileView.layer.cornerRadius = 15;
+        profileView.layer.borderColor =  UIColor(white: 0.7, alpha: 0.8).cgColor
+        profileView.layer.borderWidth = 1;
+        
+        // Set the avatar
+        let imageQuery = UserImage.query()
+        imageQuery?.whereKey("user", equalTo: posts[section].author)
+        imageQuery?.includeKey("media")
+        imageQuery?.getFirstObjectInBackground(block: { (queriedImage, error) in
+            if let error = error{
+                print(error.localizedDescription)
+            } else{
+                let image = queriedImage as! UserImage
+                profileView.file = image.media
+                profileView.loadInBackground()
+            }
+        })
+
+        headerView.addSubview(profileView)
+        
+        // Add a UILabel for the date here
+        // Use the section number to get the right URL
+        let label = UILabel(frame: CGRect(x: 50, y: 0, width: 320, height: 50))
+        label.textColor = UIColor(white: 1, alpha: 1)
+        let postDate = posts[section].createdAt
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy HH:mm a"
+        dateFormatter.locale = Locale(identifier: "en_US")
+        
+        do {
+            let poster = try PFQuery.getUserObject(withId: posts[section].author.objectId!)
+            label.text = "*\(poster.username!)* \(dateFormatter.string(from: postDate!))"
+        } catch {}
+        //label.text = " \(dateFormatter.string(from: postDate!))"
+        label.font = UIFont(name: "Helvetica Neue", size: 17)
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        headerView.addSubview(label)
+        
+        return headerView
+    }
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return posts.count
+//    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
-        cell.postImg.file = posts[indexPath.row].media
+        cell.postImg.file = posts[indexPath.section].media
         cell.postImg.loadInBackground()
-        cell.numberOfLikesLbl.text = String(posts[indexPath.row].likesCount)
-        cell.postID = posts[indexPath.row].objectId
+        cell.numberOfLikesLbl.text = String(posts[indexPath.section].likesCount)
+        cell.postID = posts[indexPath.section].objectId
         
         return cell
     }

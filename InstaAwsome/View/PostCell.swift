@@ -12,14 +12,18 @@ import Lottie
 
 class PostCell: UITableViewCell {
 
+    @IBOutlet weak var likeBtn: LOTAnimationView!
     @IBOutlet weak var postImg: PFImageView!
-    @IBOutlet weak var likeBtn: UIButton!
     @IBOutlet weak var numberOfLikesLbl: UILabel!
     var postID : String!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        likeBtn.setAnimation(named: "like")
+        likeBtn.contentMode = .scaleAspectFill
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likeBtnPressed(_:)))
+        likeBtn.addGestureRecognizer(tap)
+        
         // Initialization code
     }
 
@@ -32,12 +36,13 @@ class PostCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func likeBtnPressed(_ sender: Any) {
+    @objc func likeBtnPressed(_ sender: Any) {
         let query = PFQuery(className: "Post")
         query.getObjectInBackground(withId: postID) { (post, error) in
             if let error = error{
                 print(error.localizedDescription)
             } else{
+                self.likeBtn.play()
                 post?["likesCount"] = Int(self.numberOfLikesLbl.text!)! + 1
                 post?.saveInBackground()
                 self.numberOfLikesLbl.text = String(Int(self.numberOfLikesLbl.text!)! + 1)

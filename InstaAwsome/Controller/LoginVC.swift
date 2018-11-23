@@ -17,7 +17,6 @@ class LoginVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var animateView: LOTAnimationView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         startAnimate()
@@ -29,6 +28,7 @@ class LoginVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     @objc func startAnimate(){
         animateView.setAnimation(named: "instagram")
         animateView.play()
+
     }
 
     @IBAction func signInPressed(_ sender: Any) {
