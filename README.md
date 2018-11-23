@@ -37,7 +37,8 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] Created a two tone color for backgrounds.
+- [x] Bind the view to the keyboard for posting comments.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
@@ -48,7 +49,14 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='"/gifs/instaGram.gif?raw=true"' width='' alt='Video Walkthrough' />
+<img src="/gifs/instaGram.gif?raw=true" width="" alt= 'Video Walkthrough'> <img src="/gifs/instaGramLogin.gif?raw=true" width="" alt= 'Video Walkthrough'>
+<img src="/gifs/instaGramUserStays.gif?raw=true" width="" alt= 'Video Walkthrough'>
+<img src="/gifs/instaGramAddComment.gif?raw=true" width="" alt= 'Video Walkthrough'>
+<img src="/gifs/instaGramLikeBtn.gif?raw=true" width="" alt= 'Video Walkthrough'>
+<img src="/gifs/instaGramPost.gif?raw=true" width="" alt= 'Video Walkthrough'>
+<img src="/gifs/instaGramUserImage.gif?raw=true" width="" alt= 'Video Walkthrough'>
+<img src="/gifs/instaGramuserImgDetail.gif?raw=true" width="" alt= 'Video Walkthrough'>
+<img src="/gifs/instaGramLogOut.gif?raw=true" width="" alt= 'Video Walkthrough'>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
