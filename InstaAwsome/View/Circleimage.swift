@@ -16,14 +16,21 @@ class Circleimage: PFImageView {
         setUpView()
     }
     
+    @IBInspectable var cornerRadius: CGFloat = 3.0{
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+            self.clipsToBounds = true
+        }
+    }
+    
     func setUpView(){
-        self.layer.cornerRadius = self.frame.width/2
+        self.layer.cornerRadius = cornerRadius
         self.clipsToBounds = true
     }
     
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        setUpView()
+        self.setUpView()
     }
 
 }

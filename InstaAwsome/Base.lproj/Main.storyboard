@@ -110,7 +110,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-bv-crY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-bv-crY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,12 +123,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="335.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-wD-kTy" customClass="PFImageView">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-wD-kTy" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
                                                     <rect key="frame" x="17" y="13" width="380" height="260"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="260" id="fzZ-QV-UdF"/>
                                                         <constraint firstAttribute="width" constant="380" id="wKr-eO-ANe"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="35"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-V9-G5p" customClass="LOTAnimationView">
                                                     <rect key="frame" x="15" y="276" width="50" height="50"/>
@@ -142,9 +147,9 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdZ-Wy-qdd">
-                                                    <rect key="frame" x="63" y="291.5" width="50" height="29"/>
+                                                    <rect key="frame" x="63" y="291.5" width="331" height="29"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="lle-Wz-Ges"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="lle-Wz-Ges"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
@@ -153,6 +158,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Ebo-wD-kTy" firstAttribute="centerY" secondItem="rzN-Ru-NAp" secondAttribute="centerY" constant="-25" id="1sy-eV-7ks"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DdZ-Wy-qdd" secondAttribute="trailing" id="K8y-iC-kZz"/>
                                                 <constraint firstItem="2y9-V9-G5p" firstAttribute="top" secondItem="Ebo-wD-kTy" secondAttribute="bottom" constant="3" id="Vyu-ef-O3F"/>
                                                 <constraint firstItem="DdZ-Wy-qdd" firstAttribute="centerY" secondItem="2y9-V9-G5p" secondAttribute="centerY" constant="5" id="bbD-ho-j7h"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2y9-V9-G5p" secondAttribute="bottom" constant="2" id="emG-WV-rIk"/>
@@ -245,11 +251,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJn-EH-9zg" customClass="PFImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJn-EH-9zg" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
                                 <rect key="frame" x="20" y="107" width="374" height="275"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="275" id="ycr-Wl-uwK"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-11-19T06:21:00.488Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mw-I1-0JM">
                                 <rect key="frame" x="20" y="390" width="374" height="21"/>
@@ -283,12 +294,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="0og-3t-gbZ" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="0og-3t-gbZ" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="xRx-Au-h2U"/>
                                                         <constraint firstAttribute="height" constant="50" id="ybx-Vb-xTF"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -476,7 +492,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.72298377749999998" green="0.089435876619999993" blue="0.50482250340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -496,6 +512,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="e04-hU-udz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.72298377749999998" green="0.089435876619999993" blue="0.50482250340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -536,12 +555,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeH-UJ-GNj">
                                 <rect key="frame" x="0.0" y="88" width="414" height="130"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-lR-T8C" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-lR-T8C" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
                                         <rect key="frame" x="8" y="6" width="122" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="122" id="H4T-tx-cNc"/>
                                             <constraint firstAttribute="height" constant="128" id="kW1-94-E2E"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62Y-NZ-Kj1">
                                         <rect key="frame" x="145" y="59.5" width="261" height="21"/>
@@ -578,8 +602,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="136" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5yT-yA-Knd" customClass="PFImageView">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5yT-yA-Knd" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="136" height="133"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="48"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -626,6 +655,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="956-qA-itD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.72298377749999998" green="0.089435876619999993" blue="0.50482250340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -645,6 +677,6 @@
         <image name="send" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EPm-P9-fdY"/>
+        <segue reference="Dfm-3T-xnJ"/>
     </inferredMetricsTieBreakers>
 </document>

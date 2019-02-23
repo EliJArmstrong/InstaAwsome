@@ -137,14 +137,13 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 75))
         headerView.backgroundColor = UIColor(white: 0, alpha: 0)
         
-        let profileView = PFImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
-        profileView.clipsToBounds = true
-        profileView.layer.cornerRadius = 15;
-        profileView.layer.borderColor =  UIColor(white: 0.7, alpha: 0.8).cgColor
-        profileView.layer.borderWidth = 1;
+        let profileView = Circleimage(frame: CGRect(x: 10, y: 25, width: 50, height: 50))
+        profileView.cornerRadius = 15.0
+        profileView.layer.borderColor =  UIColor(white: 1, alpha: 0.8).cgColor
+        profileView.layer.borderWidth = 3;
         
         // Set the avatar
         let imageQuery = UserImage.query()
@@ -164,7 +163,7 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // Add a UILabel for the date here
         // Use the section number to get the right URL
-        let label = UILabel(frame: CGRect(x: 50, y: 0, width: 320, height: 50))
+        let label = UILabel(frame: CGRect(x: 65, y: 10, width: 320, height: 50))
         label.textColor = UIColor(white: 1, alpha: 1)
         let postDate = posts[section].createdAt
         let dateFormatter = DateFormatter()
@@ -184,9 +183,6 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return headerView
     }
     
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return posts.count
-//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
