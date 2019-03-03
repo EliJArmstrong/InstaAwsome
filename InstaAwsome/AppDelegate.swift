@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(
             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "InstaAwesome"
-                configuration.clientKey = "*U$PQ#*U$3nUQU4uq#H$UQH#4H$IUH#QO$UHQJB$3lkjQ#Lkjq3lkjherlj3hrzqjJ:QJu)(*7)(*7"  // set to nil assuming you have not set clientKey
+                configuration.clientKey = "hdjhfluadhfaweiuyrp98q4320q8ywepruhjkdfnfldjkasfhlwiuqth"  // set to nil assuming you have not set clientKey hdjhfluadhfaweiuyrp98q4320q8ywepruhjkdfnfldjkasfhlwiuqth *U$PQ#*U$3nUQU4uq#H$UQH#4H$IUH#QO$UHQJB$3lkjQ#Lkjq3lkjherlj3hrzqjJ:QJu)(*7)(*7
                 configuration.server = "https://mysterious-forest-31685.herokuapp.com/parse"
             })
         )
