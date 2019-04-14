@@ -7,20 +7,22 @@
 //
 
 import UIKit
+//import Parse
 
-
-/// The Comment Cell for the table view for the post detail VC.
 class CommentCell: UITableViewCell {
     
-    @IBOutlet weak var commentLbl: UILabel! // Shows the comment for the comment
-    @IBOutlet weak var userImage: Circleimage! // The users image for the user how commented.
+    @IBOutlet weak var commentLbl: UILabel!
+    @IBOutlet weak var userImage: Circleimage!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
 
 }

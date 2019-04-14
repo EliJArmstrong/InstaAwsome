@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-/// The bit of code will make the main view controller to move up when the keybaord shows.
 extension UIView {
     
     func bindToKeyboard(){

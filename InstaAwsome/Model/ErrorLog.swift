@@ -9,19 +9,15 @@
 import Foundation
 import Parse
 
-/// A table to store Error log message in the parse server.
 class ErrorLog: PFObject, PFSubclassing{
     
-    @NSManaged var user: PFUser // The user with the error.
-    @NSManaged var errorMessage: String // The message of the error.
+    @NSManaged var user: PFUser
+    @NSManaged var errorMessage: String
     
-    
-    /// The class name
     static func parseClassName() -> String {
         return "ErrorLog"
     }
     
-    /// Posts the error message.
     static func postError(withMessage message: String, withCompletion completion: PFBooleanResultBlock?) {
         // use subclass approach
         let error = ErrorLog()

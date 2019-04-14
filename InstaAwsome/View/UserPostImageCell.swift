@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-/// A very simple UICollectionViewCell this is only a PFImageView.
 class UserPostImageCell: UICollectionViewCell {
+    
     @IBOutlet weak var image: PFImageView!
 }

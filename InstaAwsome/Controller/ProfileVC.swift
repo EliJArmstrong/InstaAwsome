@@ -32,11 +32,8 @@ class ProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
             [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1),
              NSAttributedString.Key.font: UIFont(name: "noteworthy-bold", size: 20)!]
         UserNameLbl.text = PFUser.current()?.username
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         fetchData()
+        // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
