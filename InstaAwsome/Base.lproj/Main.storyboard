@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -583,9 +583,8 @@
                                     <constraint firstItem="62Y-NZ-Kj1" firstAttribute="centerY" secondItem="ziu-lR-T8C" secondAttribute="centerY" id="uaf-Oz-Uj9"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-S1-wCY">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-S1-wCY">
                                 <rect key="frame" x="0.0" y="226" width="414" height="670"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="Stu-15-D2f">
                                     <size key="itemSize" width="136" height="133"/>
@@ -628,6 +627,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Fnd-S1-wCY" secondAttribute="bottom" id="1Pu-m6-utE"/>
+                            <constraint firstItem="Fnd-S1-wCY" firstAttribute="top" secondItem="jeH-UJ-GNj" secondAttribute="bottom" constant="8" id="5Lh-kI-IHi"/>
+                            <constraint firstItem="Fnd-S1-wCY" firstAttribute="leading" secondItem="KSb-nm-Ajx" secondAttribute="leading" id="6BR-y6-eJI"/>
+                            <constraint firstItem="Fnd-S1-wCY" firstAttribute="trailing" secondItem="KSb-nm-Ajx" secondAttribute="trailing" id="6zX-Vk-kL4"/>
                             <constraint firstItem="jeH-UJ-GNj" firstAttribute="leading" secondItem="KSb-nm-Ajx" secondAttribute="leading" id="AbT-bb-LKe"/>
                             <constraint firstItem="jeH-UJ-GNj" firstAttribute="top" secondItem="KSb-nm-Ajx" secondAttribute="top" id="oIT-mk-ChE"/>
                             <constraint firstItem="jeH-UJ-GNj" firstAttribute="trailing" secondItem="KSb-nm-Ajx" secondAttribute="trailing" id="ojX-J5-WCT"/>
@@ -676,6 +679,6 @@
         <image name="send" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EPm-P9-fdY"/>
+        <segue reference="Dfm-3T-xnJ"/>
     </inferredMetricsTieBreakers>
 </document>

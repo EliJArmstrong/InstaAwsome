@@ -11,11 +11,12 @@ import Parse
 
 class Post: PFObject, PFSubclassing {
     
-    @NSManaged var media : PFFileObject
-    @NSManaged var author: PFUser
-    @NSManaged var caption: String
-    @NSManaged var likesCount: Int
-    @NSManaged var commentsCount: Int
+    @NSManaged var media : PFFileObject // Holds the image of the Post.
+    @NSManaged var author: PFUser // The user that posted the Post.
+    @NSManaged var caption: String // The caption the author included
+    @NSManaged var likesCount: Int // Holds the like count of the Post.
+    @NSManaged var commentsCount: Int // Holds the like count of the Post.
+    
     
     /* Needed to implement PFSubclassing interface */
     class func parseClassName() -> String {

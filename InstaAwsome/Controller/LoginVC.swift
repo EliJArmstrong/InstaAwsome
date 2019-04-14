@@ -64,7 +64,6 @@ class LoginVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         
         // set user properties
         newUser.username = userNameField.text
-        //newUser.email = passwordField.text
         newUser.password = passwordField.text
         
         //call sign up function on the object

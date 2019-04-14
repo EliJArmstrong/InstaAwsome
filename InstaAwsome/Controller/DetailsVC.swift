@@ -43,9 +43,7 @@ class DetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         fetchComments()
     }
     
-    /// <#Description#>
-    ///
-    /// - Parameter animated: <#animated description#>
+    
     override func viewWillDisappear(_ animated: Bool) {
         tabBarController?.tabBar.isHidden = false
     }

@@ -9,22 +9,23 @@
 import Foundation
 import Parse
 
+// The Comment of a Post
 class Comment: PFObject, PFSubclassing{
     
-    @NSManaged var author: PFUser
-    @NSManaged var comment: String
-    //@NSManaged var poster: String
-    @NSManaged var post: Post
+    @NSManaged var author: PFUser // The user that Post the comment
+    @NSManaged var comment: String // The message (comment) for the post.
+    @NSManaged var post: Post // The Post the comment is for.
     
+    /// The name of the object for the parse server
     static func parseClassName() -> String {
         return "Comment"
     }
     
+    // Posts the comment to the parse sever.
     static func postComment(post: Post, comment: String, withCompletion completion: PFBooleanResultBlock?){
         let commentObject = Comment()
         
         commentObject.author = PFUser.current()!
-        //commentObject.poster = PFUser.current()!.username!
         commentObject.comment = comment
         commentObject.post = post
         
