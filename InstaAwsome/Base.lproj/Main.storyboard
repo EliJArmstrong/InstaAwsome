@@ -110,23 +110,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-bv-crY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-bv-crY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" red="0.72298377749999998" green="0.089435876619999993" blue="0.50482250340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="336" id="hlN-U6-0Yz" customClass="PostCell" customModule="InstaAwsome" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="336"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hlN-U6-0Yz" id="rzN-Ru-NAp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="335.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-wD-kTy" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="10" width="384" height="262"/>
+                                                    <rect key="frame" x="17" y="13" width="380" height="260"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Ebo-wD-kTy" secondAttribute="height" multiplier="192:131" id="dIK-um-E2Q"/>
+                                                        <constraint firstAttribute="height" constant="260" id="fzZ-QV-UdF"/>
+                                                        <constraint firstAttribute="width" constant="380" id="wKr-eO-ANe"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -135,33 +136,35 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-V9-G5p" customClass="LOTAnimationView">
-                                                    <rect key="frame" x="15" y="286" width="50" height="50"/>
+                                                    <rect key="frame" x="15" y="276" width="50" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="uD3-9F-Vs2"/>
-                                                        <constraint firstAttribute="height" constant="50" id="x0Z-af-z9m"/>
+                                                        <constraint firstAttribute="height" constant="50" id="5C6-4y-Ft8"/>
+                                                        <constraint firstAttribute="width" constant="50" id="CTz-3y-CL0"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="animation" value="like"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdZ-Wy-qdd">
-                                                    <rect key="frame" x="65" y="297" width="334" height="29"/>
+                                                    <rect key="frame" x="63" y="291.5" width="331" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="lle-Wz-Ges"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="2y9-V9-G5p" secondAttribute="bottom" id="3Z9-ae-GyB"/>
-                                                <constraint firstItem="2y9-V9-G5p" firstAttribute="leading" secondItem="rzN-Ru-NAp" secondAttribute="leading" constant="15" id="4GT-42-qaI"/>
-                                                <constraint firstItem="DdZ-Wy-qdd" firstAttribute="leading" secondItem="2y9-V9-G5p" secondAttribute="trailing" id="4Oo-Io-pFP"/>
-                                                <constraint firstAttribute="trailing" secondItem="DdZ-Wy-qdd" secondAttribute="trailing" constant="15" id="Guy-5l-7M1"/>
-                                                <constraint firstItem="Ebo-wD-kTy" firstAttribute="leading" secondItem="rzN-Ru-NAp" secondAttribute="leading" constant="15" id="Jqa-r1-KWN"/>
-                                                <constraint firstAttribute="bottom" secondItem="DdZ-Wy-qdd" secondAttribute="bottom" constant="10" id="O1a-sG-L4F"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ebo-wD-kTy" secondAttribute="trailing" constant="15" id="aGD-5t-Qjo"/>
-                                                <constraint firstItem="Ebo-wD-kTy" firstAttribute="top" secondItem="rzN-Ru-NAp" secondAttribute="top" constant="10" id="bUf-AW-zwC"/>
-                                                <constraint firstItem="2y9-V9-G5p" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ebo-wD-kTy" secondAttribute="bottom" constant="5" id="ePx-XU-JLd"/>
+                                                <constraint firstItem="Ebo-wD-kTy" firstAttribute="centerY" secondItem="rzN-Ru-NAp" secondAttribute="centerY" constant="-25" id="1sy-eV-7ks"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DdZ-Wy-qdd" secondAttribute="trailing" id="K8y-iC-kZz"/>
+                                                <constraint firstItem="2y9-V9-G5p" firstAttribute="top" secondItem="Ebo-wD-kTy" secondAttribute="bottom" constant="3" id="Vyu-ef-O3F"/>
+                                                <constraint firstItem="DdZ-Wy-qdd" firstAttribute="centerY" secondItem="2y9-V9-G5p" secondAttribute="centerY" constant="5" id="bbD-ho-j7h"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2y9-V9-G5p" secondAttribute="bottom" constant="2" id="emG-WV-rIk"/>
+                                                <constraint firstItem="DdZ-Wy-qdd" firstAttribute="leading" secondItem="2y9-V9-G5p" secondAttribute="trailing" constant="-2" id="gSW-5L-Cs3"/>
+                                                <constraint firstItem="Ebo-wD-kTy" firstAttribute="centerX" secondItem="rzN-Ru-NAp" secondAttribute="centerX" id="lds-Dw-qra"/>
+                                                <constraint firstItem="2y9-V9-G5p" firstAttribute="leading" secondItem="rzN-Ru-NAp" secondAttribute="leading" constant="15" id="yhb-yd-a91"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,14 +177,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="7a3-r3-nj9" customClass="LOTAnimationView">
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="TYQ-Kl-EZE" customClass="LOTAnimationView">
                                 <rect key="frame" x="57" y="348" width="300" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="DwZ-CS-bO9"/>
-                                    <constraint firstAttribute="width" constant="300" id="fmT-oA-Z7x"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="gM0-4g-idg"/>
-                                    <constraint firstAttribute="height" constant="200" id="zJM-JH-0Pk"/>
+                                    <constraint firstAttribute="width" constant="300" id="OAQ-tK-jrv"/>
+                                    <constraint firstAttribute="height" constant="200" id="Pmp-J0-RyA"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="instagram"/>
@@ -190,8 +191,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7a3-r3-nj9" firstAttribute="centerX" secondItem="e42-ax-oFc" secondAttribute="centerX" id="4sq-ej-o76"/>
-                            <constraint firstItem="7a3-r3-nj9" firstAttribute="centerY" secondItem="e42-ax-oFc" secondAttribute="centerY" id="94I-Rn-ZI2"/>
+                            <constraint firstItem="TYQ-Kl-EZE" firstAttribute="centerX" secondItem="e42-ax-oFc" secondAttribute="centerX" id="6IC-Q8-99B"/>
+                            <constraint firstItem="TYQ-Kl-EZE" firstAttribute="centerY" secondItem="e42-ax-oFc" secondAttribute="centerY" id="8vK-Gx-xZR"/>
                             <constraint firstItem="Af0-bv-crY" firstAttribute="top" secondItem="e42-ax-oFc" secondAttribute="top" id="AeT-VK-akg"/>
                             <constraint firstAttribute="bottom" secondItem="Af0-bv-crY" secondAttribute="bottom" id="Cg9-qA-rh6"/>
                             <constraint firstItem="Af0-bv-crY" firstAttribute="trailing" secondItem="R3p-Ub-LaR" secondAttribute="trailing" id="o7d-P9-lwL"/>
@@ -232,7 +233,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="animationView" destination="7a3-r3-nj9" id="jv8-sP-Ps3"/>
+                        <outlet property="animationView" destination="TYQ-Kl-EZE" id="fRS-a2-gNt"/>
                         <outlet property="tableView" destination="Af0-bv-crY" id="OaM-Io-55i"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="LoginVC" id="tRi-6e-4dj"/>
                         <segue destination="Ycc-AT-WsM" kind="presentation" identifier="CreatePostSegue" modalTransitionStyle="flipHorizontal" id="I7w-yn-UWH"/>
