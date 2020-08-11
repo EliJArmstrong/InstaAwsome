@@ -75,14 +75,13 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Credits
 
-List an 3rd party libraries, icons, graphics, or other assets you used in your app.
+List an 3rd party libraries, icons, graphics, or other assets:
 
 - [Lottie](https://github.com/airbnb/lottie-ios) - view animations
 
 
 ## Notes
 
-Describe any challenges encountered while building the app.
 
 ## License
 
