@@ -74,6 +74,16 @@ class ProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                 self.userImage.loadInBackground()
             }
         })
+        
+//        let query = Post.query()
+//        query?.findObjectsInBackground(block: { (objects, error) in
+//            if let error = error{
+//                print(error.localizedDescription)
+//            } else{
+//                clusters = objects
+//                clusters["A_index"] as?
+//            }
+//        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

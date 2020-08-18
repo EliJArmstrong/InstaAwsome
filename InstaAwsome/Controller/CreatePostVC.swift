@@ -16,7 +16,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var postImg: UIImageView!
     @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var postBtn: UIButton!
-    @IBOutlet weak var animationView: LOTAnimationView!
+    @IBOutlet weak var animationView: AnimationView!
     
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         postBtn.isEnabled = false
         commentField.becomeFirstResponder()
         imagePicker.delegate = self
-        animationView.setAnimation(named: "instagram")
+        animationView.animation = Animation.named("instagram")
         let tap = UITapGestureRecognizer(target: self, action: #selector(photoPicker(tapGestureRecognizer:)))
         postImg.isUserInteractionEnabled = true
         postImg.addGestureRecognizer(tap)
@@ -99,7 +99,7 @@ class CreatePostVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         let image = postImg.image
         self.animationView.isHidden = false
         self.animationView.play()
-        self.animationView.loopAnimation = true
+        self.animationView.loopMode = .loop
         Post.postUserImage(image: image, withCaption: commentField.text ?? "") { (success, error) in
             if let error = error{
                 print(error.localizedDescription)

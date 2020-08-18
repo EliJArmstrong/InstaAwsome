@@ -27,7 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
+        
         if PFUser.current() != nil {
+            print(PFUser.current()?.username!)
+//            PFUser.requestPasswordResetForEmail(inBackground: "magicypr@gmail.com") { (success, error) in
+//                if let error = error{
+//                    print(error.localizedDescription)
+//                } else{
+//                    print("password reset sent")
+//                }
+//            }
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             // view controller currently being set in Storyboard as default will be overridden
             window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "TabBar")

@@ -17,17 +17,18 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var posts = [Post]()
     var sendString: String!
     let refreshControl = UIRefreshControl()
-    @IBOutlet weak var animationView: LOTAnimationView!
+    @IBOutlet weak var animationView: AnimationView!
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
+        print("made it here 1")
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tabBarController?.tabBar.isHidden = false
-        animationView.setAnimation(named: "instagram")
-        animationView.loopAnimation = true
+        animationView.animation = Animation.named("instagram")
+        animationView.loopMode = .loop
         animationView.play()
         refreshControl.addTarget(self, action: #selector(fetchPosts), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
@@ -35,11 +36,11 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1),
              NSAttributedString.Key.font: UIFont(name: "noteworthy-bold", size: 20)!]
         fetchPosts()
+        print("made it here 2")
     }
     
     @IBAction func LogoutPressed(_ sender: Any) {
         logoutUser()
-        
     }
     
     func logoutUser(){

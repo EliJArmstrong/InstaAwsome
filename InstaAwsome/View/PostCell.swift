@@ -12,14 +12,14 @@ import Lottie
 
 class PostCell: UITableViewCell {
 
-    @IBOutlet weak var likeBtn: LOTAnimationView!
+    @IBOutlet weak var likeBtn: AnimationView!
     @IBOutlet weak var postImg: PFImageView!
     @IBOutlet weak var numberOfLikesLbl: UILabel!
     var postID : String!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        likeBtn.setAnimation(named: "like")
+        likeBtn.animation = Animation.named("like")
         likeBtn.contentMode = .scaleAspectFill
         let tap = UITapGestureRecognizer(target: self, action: #selector(likeBtnPressed(_:)))
         likeBtn.addGestureRecognizer(tap)

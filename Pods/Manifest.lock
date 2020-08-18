@@ -1,11 +1,11 @@
 PODS:
-  - Bolts/Tasks (1.9.0)
-  - lottie-ios (2.5.2)
-  - Parse (1.17.2):
-    - Parse/Core (= 1.17.2)
-  - Parse/Core (1.17.2):
-    - Bolts/Tasks (~> 1.9)
-  - Parse/UI (1.17.2):
+  - Bolts/Tasks (1.9.1)
+  - lottie-ios (3.1.8)
+  - Parse (1.18.0):
+    - Parse/Core (= 1.18.0)
+  - Parse/Core (1.18.0):
+    - Bolts/Tasks (= 1.9.1)
+  - Parse/UI (1.18.0):
     - Parse/Core
 
 DEPENDENCIES:
@@ -14,16 +14,16 @@ DEPENDENCIES:
   - Parse/UI
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Bolts
     - lottie-ios
     - Parse
 
 SPEC CHECKSUMS:
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
-  Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
 
 PODFILE CHECKSUM: b9f0e333f9ff75785e29750a2405c1de5c1c0c49
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.8.4

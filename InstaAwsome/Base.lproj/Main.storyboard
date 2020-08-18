@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="NBf-34-Bed">
-                                <rect key="frame" x="87" y="192" width="240" height="65"/>
+                                <rect key="frame" x="87" y="148" width="240" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="GxO-t9-zwd"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="jRb-08-tM0" customClass="LOTAnimationView">
-                                <rect key="frame" x="87" y="70" width="240" height="128"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="jRb-08-tM0" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="87" y="26" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="MfB-Rp-ju6"/>
@@ -33,28 +31,26 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VQj-di-dIb">
-                                <rect key="frame" x="107" y="265" width="200" height="188"/>
+                                <rect key="frame" x="107" y="221" width="200" height="196"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uh2-Bj-OL1">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="5eV-UP-RF5"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovW-A4-nrE">
-                                        <rect key="frame" x="0.0" y="45" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="49" width="200" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="37J-QI-V4f"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHd-hX-4U2">
-                                        <rect key="frame" x="50.5" y="90" width="99" height="53"/>
+                                        <rect key="frame" x="50.5" y="98" width="99" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <state key="normal" title="Sign In"/>
                                         <connections>
@@ -62,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js4-SE-X3B">
-                                        <rect key="frame" x="73" y="158" width="54" height="30"/>
+                                        <rect key="frame" x="73" y="166" width="54" height="30"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
                                             <action selector="signUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y5O-g2-Lhu"/>
@@ -95,7 +91,7 @@
                         <outlet property="animateView" destination="jRb-08-tM0" id="Rdi-bw-SBC"/>
                         <outlet property="passwordField" destination="ovW-A4-nrE" id="zbE-jf-ujJ"/>
                         <outlet property="userNameField" destination="Uh2-Bj-OL1" id="rTJ-ZJ-VKV"/>
-                        <segue destination="cU6-Pg-M1d" kind="presentation" identifier="LoginSegue" modalTransitionStyle="crossDissolve" id="Gdx-m6-yFy"/>
+                        <segue destination="cU6-Pg-M1d" kind="show" identifier="LoginSegue" id="Gdx-m6-yFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -107,11 +103,11 @@
             <objects>
                 <viewController storyboardIdentifier="PostVC" id="G2R-Sh-ydP" customClass="PostVC" customModule="InstaAwsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e42-ax-oFc" customClass="GradientView" customModule="InstaAwsome" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-bv-crY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -120,7 +116,7 @@
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="336"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hlN-U6-0Yz" id="rzN-Ru-NAp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="335.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-wD-kTy" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
@@ -135,7 +131,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-V9-G5p" customClass="LOTAnimationView">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-V9-G5p" customClass="AnimationView" customModule="Lottie">
                                                     <rect key="frame" x="15" y="276" width="50" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -177,8 +173,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="TYQ-Kl-EZE" customClass="LOTAnimationView">
-                                <rect key="frame" x="57" y="348" width="300" height="200"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="TYQ-Kl-EZE" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="57" y="321" width="300" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="OAQ-tK-jrv"/>
@@ -211,7 +207,7 @@
                     <navigationItem key="navigationItem" title="Awesome Gram" id="Dil-w2-t8A">
                         <barButtonItem key="leftBarButtonItem" id="nbp-MA-8GW">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BH6-fV-hRP">
-                                <rect key="frame" x="20" y="0.0" width="92" height="44"/>
+                                <rect key="frame" x="20" y="6" width="92" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <state key="normal" title="Logout"/>
@@ -222,7 +218,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="YYm-s9-Dw5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dy1-IU-dca">
-                                <rect key="frame" x="302" y="0.0" width="92" height="44"/>
+                                <rect key="frame" x="302" y="6" width="92" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <state key="normal" title="New Post"/>
@@ -248,11 +244,11 @@
             <objects>
                 <viewController id="ncS-X7-6Xa" customClass="DetailsVC" customModule="InstaAwsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l3b-4N-OTO" customClass="GradientView" customModule="InstaAwsome" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJn-EH-9zg" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
-                                <rect key="frame" x="20" y="107" width="374" height="275"/>
+                                <rect key="frame" x="20" y="75" width="374" height="275"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="275" id="ycr-Wl-uwK"/>
                                 </constraints>
@@ -263,7 +259,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-11-19T06:21:00.488Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mw-I1-0JM">
-                                <rect key="frame" x="20" y="390" width="374" height="21"/>
+                                <rect key="frame" x="20" y="358" width="374" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="m8G-eM-MXh"/>
                                 </constraints>
@@ -272,13 +268,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxM-0e-EzC">
-                                <rect key="frame" x="20" y="419" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="387" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kbI-kZ-Gli">
-                                <rect key="frame" x="20" y="448" width="374" height="366"/>
+                                <rect key="frame" x="20" y="416" width="374" height="344"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="75" id="tgG-0Z-ppq" customClass="CommentCell" customModule="InstaAwsome" customModuleProvider="target">
@@ -326,11 +322,10 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap here to enter a comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqh-ha-lDR">
-                                <rect key="frame" x="20" y="821" width="374" height="40"/>
+                                <rect key="frame" x="20" y="767" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="13S-6E-7tN"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -339,7 +334,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L09-fJ-muk">
-                                <rect key="frame" x="363" y="826" width="31" height="30"/>
+                                <rect key="frame" x="363" y="772" width="31" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="31" id="gdG-RK-LQI"/>
                                 </constraints>
@@ -380,6 +375,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="SIg-Wd-uYj"/>
                     <connections>
                         <outlet property="caption" destination="UxM-0e-EzC" id="gXM-Ka-VY3"/>
                         <outlet property="commentField" destination="xqh-ha-lDR" id="eYH-q1-SU2"/>
@@ -398,24 +394,23 @@
             <objects>
                 <viewController id="MSt-Gk-YXV" customClass="CreatePostVC" customModule="InstaAwsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1d4-Xp-Xvl" customClass="GradientView" customModule="InstaAwsome" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="A4O-dA-VJU">
-                                <rect key="frame" x="20" y="104" width="374" height="305"/>
+                                <rect key="frame" x="20" y="72" width="374" height="305"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="305" id="zGH-ez-ffv"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Comment Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zam-bx-4Z9">
-                                <rect key="frame" x="20" y="417" width="374" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="20" y="385" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="DR5-un-7NX" customClass="LOTAnimationView">
-                                <rect key="frame" x="20" y="305" width="374" height="286"/>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="DR5-un-7NX" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="20" y="278" width="374" height="286"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="286" id="EOx-mL-mgw"/>
@@ -450,7 +445,7 @@
                     <navigationItem key="navigationItem" title="Create Post" id="KFN-Dc-ine">
                         <barButtonItem key="leftBarButtonItem" id="cQB-Qv-TXO">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tWI-LT-Zum">
-                                <rect key="frame" x="20" y="0.0" width="92" height="44"/>
+                                <rect key="frame" x="20" y="6" width="92" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <state key="normal" title="Cancel"/>
@@ -461,7 +456,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="JAP-sg-Ybc">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PC1-kI-R9f">
-                                <rect key="frame" x="275" y="0.0" width="119" height="44"/>
+                                <rect key="frame" x="275" y="6" width="119" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <state key="normal" title="Post"/>
@@ -489,7 +484,7 @@
                     <tabBarItem key="tabBarItem" title="" image="feed_tab" id="imE-yF-bBn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="YmX-V3-DC1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.72298377749999998" green="0.089435876619999993" blue="0.50482250340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -510,7 +505,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ycc-AT-WsM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="e04-hU-udz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.72298377749999998" green="0.089435876619999993" blue="0.50482250340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -530,6 +525,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="cU6-Pg-M1d" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PlI-bz-u7l"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Jw5-7z-G40">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -549,11 +545,11 @@
             <objects>
                 <viewController id="odi-Lx-xwG" customClass="ProfileVC" customModule="InstaAwsome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gLx-Vj-78o" customClass="GradientView" customModule="InstaAwsome" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeH-UJ-GNj">
-                                <rect key="frame" x="0.0" y="88" width="414" height="130"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="130"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-lR-T8C" customClass="Circleimage" customModule="InstaAwsome" customModuleProvider="target">
                                         <rect key="frame" x="8" y="6" width="122" height="128"/>
@@ -653,7 +649,7 @@
                     <tabBarItem key="tabBarItem" title="" image="profile_tab" id="UPk-bG-4aQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="956-qA-itD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.72298377749999998" green="0.089435876619999993" blue="0.50482250340000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -669,6 +665,9 @@
             <point key="canvasLocation" x="1924.6376811594205" y="890.625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dfm-3T-xnJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Instagram_logo" width="1200" height="429"/>
         <image name="feed_tab" width="25" height="25"/>
@@ -676,7 +675,4 @@
         <image name="profile_tab" width="25" height="25"/>
         <image name="send" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="EPm-P9-fdY"/>
-    </inferredMetricsTieBreakers>
 </document>

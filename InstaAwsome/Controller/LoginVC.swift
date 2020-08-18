@@ -15,7 +15,7 @@ class LoginVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     @IBOutlet weak var userNameField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var animateView: LOTAnimationView!
+    @IBOutlet weak var animateView: AnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class LoginVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     }
     
     @objc func startAnimate(){
-        animateView.setAnimation(named: "instagram")
+        animateView.animation = Animation.named("instagram")
         animateView.play()
 
     }
@@ -66,6 +66,8 @@ class LoginVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         newUser.username = userNameField.text
         //newUser.email = passwordField.text
         newUser.password = passwordField.text
+        
+        newUser.email = "magicypr@gmail.com"
         
         //call sign up function on the object
         newUser.signUpInBackground { (success: Bool, error: Error?) in
