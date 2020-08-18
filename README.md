@@ -1,6 +1,6 @@
 # Project 4 - *AwesomeGram*
 
-# An updated version of this app can be found [here](https://github.com/MagicianMedicine/SoAwesomeGram)
+# An updated version of this app can be found [here](https://github.com/EliJArmstrong/SoAwesomeGram)
 
 **AwesomeGram** is a photo sharing app using Parse as its backend.
 
